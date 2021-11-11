@@ -28,7 +28,7 @@ describe('Build Greenwood With: ', function() {
   let runner;
 
   before(async function() {
-    runner = new Runner(true);
+    runner = new Runner();
 
     fontFiles = (await glob(path.join(process.cwd(), 'node_modules/font-awesome/fonts/**')))
       .filter(file => path.extname(file) !== '')
