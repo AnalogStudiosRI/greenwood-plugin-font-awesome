@@ -1,0 +1,30 @@
+{
+  "name": "greenwood-plugin-font-awesome",
+  "version": "0.1.0",
+  "description": "A Greenwood plugin for managing Font Awesome related dependencies for building and development.",
+  "main": "src/index.js",
+  "author": "Owen Buckley <owen@thegreenhouse.io>",
+  "license": "MIT",
+  "homepage": "https://github.com/AnalogStudiosRI/greenwood-plugin-font-awesome#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnalogStudiosRI/greenwood-plugin-font-awesome.git"
+  },
+  "keywords": [
+    "Greenwood",
+    "Font Awesome"
+  ],
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "clean": "rimraf .greenwood/ public/ reports/ storybook-static/",
+    "lint": "eslint \"*.js\" \"./src/**/*.js\" && ls-lint \"./src/*.js\"",
+    "build": "node ."
+  },
+  "dependencies": {
+    "@ls-lint/ls-lint": "^1.10.0",
+    "eslint": "^8.2.0",
+    "rimraf": "^3.0.2"
+  }
+}
