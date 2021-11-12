@@ -18,13 +18,26 @@
     "src"
   ],
   "scripts": {
-    "clean": "rimraf .greenwood/ public/ reports/ storybook-static/",
-    "lint": "eslint \"*.js\" \"./src/**/*.js\" && ls-lint \"./src/*.js\"",
-    "build": "node ."
+    "clean": "rimraf .greenwood/ public/ reports/",
+    "lint": "eslint \"*.js\" \"./src/**/*.js\" \"./test/**/*.js\" && ls-lint \"./src/*.js\"",
+    "test": "BROWSERSLIST_IGNORE_OLD_DATA=true __GWD_ROLLUP_MODE__=strict nyc mocha",
+    "test:tdd": "yarn test --watch"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "@greenwood/cli": "0.19.1",
+    "font-awesome": "4.6.3"
+  },
+  "devDependencies": {
+    "@greenwood/cli": "0.19.1",
     "@ls-lint/ls-lint": "^1.10.0",
+    "chai": "^4.2.0",
     "eslint": "^8.2.0",
+    "font-awesome": "4.6.3",
+    "gallinago": "^0.4.2",
+    "glob-promise": "^4.2.2",
+    "mocha": "^6.1.4",
+    "nyc": "^15.1.0",
+    "request": "^2.88.2",
     "rimraf": "^3.0.2"
   }
 }
