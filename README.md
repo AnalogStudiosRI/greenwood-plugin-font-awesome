@@ -15,11 +15,11 @@ This plugin is useful because Font Awesome references its [font files relatively
 }
 ```
 
-This means that these paths need to be resolved specifically to the right location in _node_modules_ where the Font Awesome package is located.  Additionally, this plugin ensures the font files are copied as part of the build workflow.
+This means that these paths need to be resolved specifically to the right location in _node_modules_ where the Font Awesome package is located.  Additionally, this plugin ensures the font files are copied as part of the build process.
 
 ## Installation
 
-> This plugin defines the following `peerDependencies`, so please make sure you already have them installed them first
+> This plugin defines the following `peerDependencies`, so please make sure you already have them installed first
 >   - `@greenwood/cli@^0.19.0`
 >   - `font-awesome@^4.6.3`
 
@@ -34,7 +34,7 @@ $ yarn add greenwood-plugin-font-awesome --dev
 
 ## Usage
 
-Simply add this to the plugins array of yuour _greenwood.config.js_
+Simply add this to the plugins array of your _greenwood.config.js_
 
 ```js
 const greenwoodPluginFontAwesome = require('greenwood-plugin-font-awesome');
