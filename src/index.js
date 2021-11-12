@@ -3,8 +3,14 @@ const { ResourceInterface } = require('@greenwood/cli/src/lib/resource-interface
 const { getNodeModulesLocationForPackage } = require('@greenwood/cli/src/lib/node-modules-utils');
 
 class FontAwesomeResource extends ResourceInterface {
+  constructor(compilation, options) {
+    super(compilation, options);
+  }
+
   async shouldResolve(url) {
-    const isFontAweome = url.indexOf('fonts/fontawesome-webfont') > 0;
+    // we only want to resolve relative paths to fontawesome
+    // like how it gets referenced in its own CSS
+    const isFontAweome = url.indexOf('fonts/fontawesome-webfont') >= 0 && url.indexOf('node_modules') < 0;
 
     return Promise.resolve(isFontAweome);
   }
