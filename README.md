@@ -2,7 +2,7 @@
 
 [![GitHub release](https://img.shields.io/github/tag/AnalogStudiosRI/greenwood-plugin-font-awesome.svg)](https://github.com/AnalogStudiosRI/greenwood-plugin-font-awesome/tags)
 ![GitHub Actions status](https://github.com/AnalogStudiosRI/greenwood-plugin-font-awesome/workflows/Main%20Integration/badge.svg)
-[![GitHub issues](https://img.shields.io/github/issues-pr-raw/AnalogStudiosRI/greenwood-plugin-font-awesome.svg)](https://github.com/AnalogStudiosRI/www.analogstudios.net/issues)
+[![GitHub issues](https://img.shields.io/github/issues-pr-raw/AnalogStudiosRI/greenwood-plugin-font-awesome.svg)](https://github.com/AnalogStudiosRI/greenwood-plugin-font-awesome/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/AnalogStudiosRI/greenwood-plugin-font-awesome/master/LICENSE.md)
 
 ## Overview
