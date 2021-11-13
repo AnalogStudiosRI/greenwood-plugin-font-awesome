@@ -24,11 +24,11 @@
     "test:tdd": "yarn test --watch"
   },
   "peerDependencies": {
-    "@greenwood/cli": "0.19.1",
-    "font-awesome": "4.6.3"
+    "@greenwood/cli": "^0.19.1",
+    "font-awesome": "^4.6.3"
   },
   "devDependencies": {
-    "@greenwood/cli": "0.19.1",
+    "@greenwood/cli": "^0.19.1",
     "@ls-lint/ls-lint": "^1.10.0",
     "chai": "^4.2.0",
     "eslint": "^8.2.0",

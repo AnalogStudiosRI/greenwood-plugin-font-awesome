@@ -216,10 +216,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@greenwood/cli@0.19.1":
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/@greenwood/cli/-/cli-0.19.1.tgz#11a38015c3384d8cef3e62cdfee5e5fa8da28384"
-  integrity sha512-M6r7bxtnv3Mu3X11hPXNg/oKIL5ZBLmEWUcOjnhMsA215zyQYXXyztswL5tmlChSSxjZK9ub5RTw7TcmX69h9w==
+"@greenwood/cli@^0.19.1":
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/@greenwood/cli/-/cli-0.19.2.tgz#ae8e59cfdb134ff7575757e1ac55765dd965eb62"
+  integrity sha512-teF0A/ih+w0c4nz59CZKA0nT8kGGIP+pyncTGlSZOo/YC7UXJ/QvOoXfV6evOeffxbyRFYbLg8TCbxF31dzr/w==
   dependencies:
     "@rollup/plugin-node-resolve" "^13.0.0"
     "@rollup/plugin-replace" "^2.3.4"
