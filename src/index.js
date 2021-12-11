@@ -1,6 +1,6 @@
-const path = require('path');
-const { ResourceInterface } = require('@greenwood/cli/src/lib/resource-interface');
-const { getNodeModulesLocationForPackage } = require('@greenwood/cli/src/lib/node-modules-utils');
+import path from 'path';
+import { ResourceInterface } from '@greenwood/cli/src/lib/resource-interface.js';
+import { getNodeModulesLocationForPackage } from '@greenwood/cli/src/lib/node-modules-utils.js';
 
 class FontAwesomeResource extends ResourceInterface {
   constructor(compilation, options) {
@@ -16,14 +16,14 @@ class FontAwesomeResource extends ResourceInterface {
   }
 
   async resolve(url) {
-    const nodeModulesLocation = getNodeModulesLocationForPackage('font-awesome');
+    const nodeModulesLocation = await getNodeModulesLocationForPackage('font-awesome');
     const barePath = this.getBareUrlPath(url);
 
     return Promise.resolve(path.join(nodeModulesLocation, barePath));
   }
 }
 
-module.exports = (options = {}) => {
+const greenwoodPluginFontAwesome = (options = {}) => {
   return [{
     type: 'copy',
     name: 'plugin-font-awesome:copy',
@@ -40,4 +40,8 @@ module.exports = (options = {}) => {
     name: 'plugin-font-awesome:resource',
     provider: (compilation) => new FontAwesomeResource(compilation, options)
   }];
+};
+
+export {
+  greenwoodPluginFontAwesome
 };

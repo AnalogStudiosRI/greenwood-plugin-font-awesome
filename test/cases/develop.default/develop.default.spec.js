@@ -14,16 +14,19 @@
  * User Workspace
  * Greenwood default (src/)
  */
-const expect = require('chai').expect;
-const glob = require('glob-promise');
-const path = require('path');
-const request = require('request');
-const Runner = require('gallinago').Runner;
+import chai from 'chai';
+import glob from 'glob-promise';
+import path from 'path';
+import request from 'request';
+import { Runner } from 'gallinago';
+import { fileURLToPath, URL } from 'url';
+
+const expect = chai.expect;
 
 describe('Develop Greenwood With: ', function() {
   const LABEL = 'Default Greenwood Configuration and Workspace';
   const cliPath = path.join(process.cwd(), 'node_modules/@greenwood/cli/src/index.js');
-  const outputPath = __dirname;
+  const outputPath = fileURLToPath(new URL('.', import.meta.url));
   const hostname = 'http://localhost';
   const port = 1984;
   let fontFiles;
@@ -82,7 +85,7 @@ describe('Develop Greenwood With: ', function() {
       });
 
       it('should return the correct response body', function(done) {
-        expect(response.body).to.contain(`<font id="fontawesomeregular" horiz-adv-x="1536" >`); // eslint-disable-line quotes
+        expect(response.body).to.contain(`<font id="FontAwesome" horiz-adv-x="1536" >`); // eslint-disable-line quotes
         done();
       });
     });
