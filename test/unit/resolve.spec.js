@@ -14,8 +14,10 @@
  * User Workspace
  * Greenwood default (src/)
  */
-const expect = require('chai').expect;
-const greenwoodPluginFontAwesome = require('../../src/index');
+import chai from 'chai';
+import { greenwoodPluginFontAwesome } from '../../src/index.js';
+
+const expect = chai.expect;
 
 describe('FontAwesomeResource: ', function() {
 

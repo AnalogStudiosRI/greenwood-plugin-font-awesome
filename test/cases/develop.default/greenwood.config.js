@@ -1,7 +1,7 @@
-const pluginFontAwesome = require('../../../src/index');
+import { greenwoodPluginFontAwesome } from '../../../src/index.js';
 
-module.exports = {
+export default {
   plugins: [
-    ...pluginFontAwesome()
+    ...greenwoodPluginFontAwesome()
   ]
 };

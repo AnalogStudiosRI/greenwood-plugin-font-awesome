@@ -1,8 +1,9 @@
 {
-  "name": "greenwood-plugin-font-awesome",
+  "name": "@analogstudiosri/greenwood-plugin-font-awesome",
   "version": "0.1.0",
   "description": "A Greenwood plugin for managing Font Awesome related dependencies for building and development.",
   "main": "src/index.js",
+  "type": "module",
   "author": "Owen Buckley <owen@thegreenhouse.io>",
   "license": "MIT",
   "homepage": "https://github.com/AnalogStudiosRI/greenwood-plugin-font-awesome#readme",
@@ -19,24 +20,24 @@
   ],
   "scripts": {
     "clean": "rimraf .greenwood/ public/ reports/",
-    "lint": "eslint \"*.js\" \"./src/**/*.js\" \"./test/**/*.js\" && ls-lint \"./src/*.js\"",
-    "test": "BROWSERSLIST_IGNORE_OLD_DATA=true __GWD_ROLLUP_MODE__=strict nyc mocha",
+    "lint": "eslint \"*.cjs\" \"./src/**/*.js\" \"./test/**/*.js\" && ls-lint \"./src/*.js\"",
+    "test": "BROWSERSLIST_IGNORE_OLD_DATA=true __GWD_ROLLUP_MODE__=strict c8 mocha",
     "test:tdd": "yarn test --watch"
   },
   "peerDependencies": {
-    "@greenwood/cli": "^0.19.1",
+    "@greenwood/cli": "^0.20.0-alpha.1",
     "font-awesome": "^4.6.3"
   },
   "devDependencies": {
-    "@greenwood/cli": "^0.19.1",
+    "@greenwood/cli": "^0.20.0-alpha.1",
     "@ls-lint/ls-lint": "^1.10.0",
+    "c8": "^7.10.0",
     "chai": "^4.2.0",
-    "eslint": "^8.2.0",
-    "font-awesome": "4.6.3",
+    "eslint": "^8.4.0",
+    "font-awesome": "^4.6.3",
     "gallinago": "^0.4.2",
     "glob-promise": "^4.2.2",
-    "mocha": "^6.1.4",
-    "nyc": "^15.1.0",
+    "mocha": "^9.1.3",
     "request": "^2.88.2",
     "rimraf": "^3.0.2"
   }
