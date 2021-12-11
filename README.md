@@ -26,16 +26,16 @@ This means that these paths need to be resolved specifically to the right locati
 ## Installation
 
 > This plugin defines the following `peerDependencies`, so please make sure you already have them installed first
->   - `@greenwood/cli@^0.19.0`
+>   - `@greenwood/cli@^0.20.0`
 >   - `font-awesome@^4.6.3`
 
 Install the plugin using your preferred package manager
 ```sh
 # npm
-$ npm install greenwood-plugin-font-awesome --save-dev
+$ npm install @analogstudiosri/greenwood-plugin-font-awesome --save-dev
 
 # yarn
-$ yarn add greenwood-plugin-font-awesome --dev
+$ yarn add @analogstudiosri/greenwood-plugin-font-awesome --dev
 ```
 
 ## Usage
@@ -43,9 +43,9 @@ $ yarn add greenwood-plugin-font-awesome --dev
 Simply add this to the plugins array of your _greenwood.config.js_
 
 ```js
-const greenwoodPluginFontAwesome = require('greenwood-plugin-font-awesome');
+import { greenwoodPluginFontAwesome } from 'greenwood-plugin-font-awesome';
 
-module.exports = {
+export default {
   plugins: [
     ...greenwoodPluginFontAwesome() // notice the spread ... !
   ]
