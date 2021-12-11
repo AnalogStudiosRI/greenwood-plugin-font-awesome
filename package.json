@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/AnalogStudiosRI/greenwood-plugin-font-awesome.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "Greenwood",
     "Font Awesome"
