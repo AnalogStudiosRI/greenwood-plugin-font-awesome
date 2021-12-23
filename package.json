@@ -28,7 +28,7 @@
     "test:tdd": "yarn test --watch"
   },
   "peerDependencies": {
-    "@greenwood/cli": "^0.20.0-alpha.1",
+    "@greenwood/cli": "^0.20.0",
     "font-awesome": "^4.6.3"
   },
   "devDependencies": {
