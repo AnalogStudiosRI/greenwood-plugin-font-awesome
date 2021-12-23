@@ -1,6 +1,6 @@
 {
   "name": "@analogstudiosri/greenwood-plugin-font-awesome",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Greenwood plugin for managing Font Awesome related dependencies for building and development.",
   "main": "src/index.js",
   "type": "module",
