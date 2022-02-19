@@ -1,6 +1,6 @@
 {
   "name": "@analogstudiosri/greenwood-plugin-font-awesome",
-  "version": "0.2.1",
+  "version": "0.2.0",
   "description": "A Greenwood plugin for managing Font Awesome related dependencies for building and development.",
   "main": "src/index.js",
   "type": "module",
@@ -28,7 +28,7 @@
     "test:tdd": "yarn test --watch"
   },
   "peerDependencies": {
-    "@greenwood/cli": "^0.20.0",
+    "@greenwood/cli": "^0.20.0-alpha.1",
     "font-awesome": "^4.6.3"
   },
   "devDependencies": {
