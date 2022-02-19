@@ -1,3 +1,4 @@
+// import fs from 'fs';
 import path from 'path';
 import { ResourceInterface } from '@greenwood/cli/src/lib/resource-interface.js';
 import { getNodeModulesLocationForPackage } from '@greenwood/cli/src/lib/node-modules-utils.js';
@@ -19,7 +20,12 @@ class FontAwesomeResource extends ResourceInterface {
     const nodeModulesLocation = await getNodeModulesLocationForPackage('font-awesome');
     const barePath = this.getBareUrlPath(url);
 
-    return Promise.resolve(path.join(nodeModulesLocation, barePath));
+    console.debug({ nodeModulesLocation });
+    console.debug('FontAwesomeResource', url);
+    console.debug({ barePath });
+    // console.debug({ location });
+    console.debug('resolveRelativeUrl', this.resolveRelativeUrl(nodeModulesLocation, barePath));
+    return Promise.resolve(path.join(nodeModulesLocation, this.resolveRelativeUrl(nodeModulesLocation, barePath)));
   }
 }
 
