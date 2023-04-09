@@ -19,7 +19,7 @@ import glob from 'glob-promise';
 import path from 'path';
 import request from 'request';
 import { Runner } from 'gallinago';
-import { fileURLToPath, URL } from 'url';
+import { fileURLToPath } from 'url';
 
 const expect = chai.expect;
 
