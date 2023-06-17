@@ -1,4 +1,3 @@
-import path from 'path';
 import { ResourceInterface } from '@greenwood/cli/src/lib/resource-interface.js';
 import { getNodeModulesLocationForPackage } from '@greenwood/cli/src/lib/node-modules-utils.js';
 
@@ -10,16 +9,16 @@ class FontAwesomeResource extends ResourceInterface {
   async shouldResolve(url) {
     // we only want to resolve relative paths to fontawesome
     // like how it gets referenced in its own CSS
-    const isFontAweome = url.indexOf('fonts/fontawesome-webfont') >= 0 && url.indexOf('node_modules') < 0;
+    const { pathname } = url;
 
-    return Promise.resolve(isFontAweome);
+    return pathname.indexOf('fonts/fontawesome-webfont') >= 0 && pathname.indexOf('node_modules') < 0;
   }
 
   async resolve(url) {
+    // TODO would be nice for Greenwood to return this as a URL too
     const nodeModulesLocation = await getNodeModulesLocationForPackage('font-awesome');
-    const barePath = this.getBareUrlPath(url);
 
-    return Promise.resolve(path.join(nodeModulesLocation, barePath));
+    return new Request(new URL(`.${url.pathname}`, `file://${nodeModulesLocation}/`));
   }
 }
 
@@ -31,8 +30,8 @@ const greenwoodPluginFontAwesome = (options = {}) => {
       const { outputDir, projectDirectory } = compilation.context;
 
       return [{
-        from: path.join(projectDirectory, 'node_modules/font-awesome/fonts'),
-        to: path.join(outputDir, 'fonts')
+        from: new URL('./node_modules/font-awesome/fonts/', projectDirectory),
+        to: new URL('./fonts/', outputDir)
       }];
     }
   }, {
