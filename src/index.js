@@ -15,7 +15,7 @@ class FontAwesomeResource extends ResourceInterface {
   }
 
   async resolve(url) {
-    // TODO wuold be nice for Greenwood to return this as a URL too
+    // TODO would be nice for Greenwood to return this as a URL too
     const nodeModulesLocation = await getNodeModulesLocationForPackage('font-awesome');
 
     return new Request(new URL(`.${url.pathname}`, `file://${nodeModulesLocation}/`));
