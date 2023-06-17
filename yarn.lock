@@ -22,10 +22,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@greenwood/cli@^0.28.0-alpha.5":
-  version "0.28.0-alpha.5"
-  resolved "https://registry.yarnpkg.com/@greenwood/cli/-/cli-0.28.0-alpha.5.tgz#4f34982d4182472835be17a7685c92b160c1fbf7"
-  integrity sha512-reYupGeIrkoWMDqC73oR/IQg4VIGsgL7sz+FMOYfeEtbyyEaRN1P6vArws8TFgML50s2BoDetk9yw78UTTw3/w==
+"@greenwood/cli@^0.28.0":
+  version "0.28.4"
+  resolved "https://registry.yarnpkg.com/@greenwood/cli/-/cli-0.28.4.tgz#feb2314c2095b8ddf87cd5038977e21a9c8580a5"
+  integrity sha512-2WjQRxGf/kKLKetwpAFP/U3Tseul+mfsR36pb0GvTZl4SPkEIVk5yiWNg2efg2o+FyGLI4GnfC89T+UezkW9aQ==
   dependencies:
     "@rollup/plugin-commonjs" "^21.0.0"
     "@rollup/plugin-node-resolve" "^13.0.0"
@@ -1112,10 +1112,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gallinago@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/gallinago/-/gallinago-0.4.2.tgz#2967c3a389439d7e452a8b2f15d3d998bd95a0d4"
-  integrity sha512-uOaN9ml78Rjl9F5dOqTV2UN6qWIf4FYjEiYsgEB8huXOCu8eT1frqKmQxZLwLKplIFDEczvw9tbocoEldFS6Tw==
+gallinago@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/gallinago/-/gallinago-0.6.0.tgz#feead00e5c95cd0b11063569fa0743dfe48184a4"
+  integrity sha512-aCBJHc/l/DGMY+N7SdMycTfd1cKhlADB0vqRftQu00yUEBM6voQa6ZWI2prOMhoM7O5IuL+79mSVSZW621ZhNQ==
 
 get-caller-file@^2.0.5:
   version "2.0.5"
