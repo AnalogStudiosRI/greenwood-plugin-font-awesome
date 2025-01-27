@@ -8,6 +8,8 @@
 ## Overview
 A [**Greenwood**](https://www.greenwoodjs.io) plugin for managing [**Font Awesome**](https://fontawesome.com) related dependencies and assets for building and development.
 
+> _As of [Greenwood v0.31.0](https://github.com/ProjectEvergreen/greenwood/releases/tag/v0.31.0) this plugin is no longer required for this kind of functionality as Greenwood can automatically bundle and inline transitive `@import` and `url` statements in CSS files._
+
 ----
 
 This plugin is useful because Font Awesome references its [font files relatively](https://unpkg.com/browse/font-awesome@4.7.0/css/font-awesome.css).
